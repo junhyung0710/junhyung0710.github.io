@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css?family=Aref Ruqaa:300,400,500i,900,900i');
+
+body, html {
+    height: 100%;
+    margin: 0;
+  } 
+
+.icon-container {
+  position: absolute;
+  padding: 40px;
+}
+
+#bg-image {
+  width: 50%;
+  height: 800px;
+  object-fit: cover;
+  float: right;
+}
+
+#background {
+  background-color: #52ADA0
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 85vh;
+}
+
+#gypsy {
+  font-family: 'Bad Script'; font-size: 100px;
+  color: #AD525F;
+  position: relative;
+  top: 50%;
+}
+
+#trattoria {
+  font-family: 'Aref Ruqaa';font-size: 22px;
+  color: white;
+}
+
+#address {
+  font-family: 'Aref Ruqaa';font-size: 22px;
+  color: white;
+  position: absolute;
+  top: 90%;
+  margin-top: 2px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.menu {
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  margin: 6px 0;
+}
+
+#x1 {
+  position: absolute;
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  margin: 18px 0;
+  transform: rotate(-45deg);
+}
+
+#x2 {
+  position: absolute;
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  margin: 18px 0;
+  transform: rotate(45deg);
+}
+
+
+table {
+  width: 100%;
+  color: #FFF5D0;
+  font-family: 'Aref Ruqaa';
+}
+tbody {
+  display: table-row-group;
+  
+}
+th {
+  padding-top: 50px;
+}
+
+td {
+  padding: 10px 30px 10px 30px;
+  vertical-align: top;
+}
+
+
+#title {
+  text-align: center;
+  color: #D8D2BD;
+}
+
+#list-container {
+  width: 50%;
+  margin-right: auto;
+  overflow: scroll;
+  height: 100%;
+  
+}
+
+#food-container {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: #FFE69C;
+  text-align: center;
+  height: 20px;
+
+
+}
+
+
+.title:hover {
+  transform: scale(1.2);
+}
+
+strong {
+  color: #FFE69C;
+}
+
+a {
+  text-decoration: none;
+}
+.menu-choices {
+ color: #FFE69C;
+ display: flex;
+ flex-direction: column;
+ text-align: center;
+ font-size: 30px; 
+}
+
+.menu-choices:hover {
+  transform: scale(1.2);  
+}
+
+#menu-container{
+  min-height: 85vh;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  height: 50%;
+
+}
+
+.x {
+  display: inline-block;
+  content: "\00d7"; /* This will render the 'X' */
+}
+
+
