@@ -1,187 +1,102 @@
-body {
-    margin: 0px;
-    font-family: 'Karla';
-    background: #f7f5f2;
-    padding: 60px;
-}
+.nav{
+    /* [Problem 1] 
+        FIXME: Set the width of the nav class to 85px. */
+    width: 85px;
 
-a {
-    color: inherit;
-    text-decoration: none;
 }
+.nav--button{
+    /*  [Problem 2]
+        FIXME: Initialize flexbox vertically. Align the text and icons so that they
+        are center aligned. */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
 
-.img-scaled {
-    width: 100%;
 }
+.dashboard{
+    /*  [Problem 3]
+        FIXME: Add some breathing room! The dashboard portion is a bit tight! 
+        (Hint: use padding!) */
+        padding: 10px;
 
-.img-scaled-wh {
-    width: 100%;
-    height: 100%:
 }
+.dashboard--title{
+    /*  [Problem 4]
+        FIXME: Use flex to add the correct spacing between the "Dashboard" text and
+        the three dot button icon that you added previously. Align them to the 
+        center of each item. */
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
 
-.clear {
-    clear: both;
 }
+.dashboard--classes{
+    /*  [Problem 5]
+        FIXME: Use flexbox to make the classes tabs wrap in a 3x2 setup.
+        Use flexbox to create equal spacing between each box. */    
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
 
-* {
-    outline: none;
 }
+.dashboard--classes__box{
+    /*  [Problem 6]
+        FIXME: Set the widths of each class tab to be 31.5% of the width;
 
-#data {
-    display: none;
-}
+        [Problem 7]
+        FIXME: Add 35px to the space under each box. (Choose carefully!) */
+        width: 31.5%;
+        margin-bottom: 35px;
 
-.tag {
-    color: #6392c0;
+        
 }
+/*  [Problem 8]
+    FIXME: when the dashboard--classes__box class is hovered over, add a
+	darker shadow around the edges of the class tab, just like the real
+	bcourses interface. Use this: 0 4px 10px rgba(0,0,0,0.35)
 
-.element {
-    color: #de6868;
-}
+	Write your own class identifier. */
+    .dashboard--classes__box:hover {
+        box-shadow: 0 4px 10px rgba(0,0,0,0.35);
+    }
 
-#container {
-    width: 720px;
-    margin: 0px auto;
-    background: white;
-    box-shadow: 0px 0px 5px #edeae5;
-    border-radius: 2px;
-    position: relative;
-    padding: 30px 0px;
-}
-#header {
-    background: #78c272;
-    padding: 15px;
-    color: white;
-    width: 270px;
-}
-#header-caption-logo {
-    width: 20px;
-    float: left;
-}
-#header-caption-name {
-    float: left;
-    margin-left: 5px;
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 15px;
-}
-#header-caption {
-    margin-bottom: 6px;
-    opacity: 0.6;
-}
-#header-title {
-    font-size: 18px;
-    font-weight: 300;
-    float: left;
-}
-#header-due {
-    float: left;
-    font-size: 18px;
-    font-weight: 300;
-    margin-left: 10px;
-    padding-left: 10px;
-    border-left: 2px solid rgba(255, 255, 255, 0.15);
-}
-.section {
-    margin: 30px 0px;
-}
-#submission-header, .info-title {
-    color: #78c272;
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 15px;
-}
-#submission-content, .info-content {
-    padding: 15px;
-    background: rgba(120, 194, 114, 0.1);
-    border-radius: 2px;
-    color: #4c5765;
-}
-.info-required {
-    font-size: 13px;
-    font-weight: 700;
-    opacity: 0.75;
-    margin-bottom: 10px;
-}
-.info-intro {
-    line-height: 24px;
-    font-size: 16px;
-    opacity: 0.75;
-}
-.info {
-    margin-bottom: 30px;
-}
-.body-header {
-    font-size: 24px;
-    font-weight: 700;
-    color: #78c272;
-}
-.body h1 {
-    font-size: 16px;
-    line-height: 24px;
-}
-.body p {
-    line-height: 24px;
-}
-.body img {
-    width: 100%;
-}
-.body a {
-    color: #78c272;
-}
-.body li {
-    line-height: 24px;
-}
-.body {
-    color: #4c5765;
-}
-.caption {
-    opacity: 0.6;
-}
-#submission {
-    padding: 0px 30px;
-}
-#submission-content p, #submission-content li {
-    line-height: 24px;
-    opacity: 0.75;
-}
 
-#announcement-heading {
-    text-align: right;
-    color: #de6868;
-    font-weight: 700;
-    font-size: 24px;
-    margin-bottom: 15px;
+
+
+.dashboard--classes__box__image{
+    /*  [Problem 9]
+        FIXME: The class tab should have a border-radius of 5px along the top
+    	of the boxes. 
+
+    	(Hint: Make sure you only add it to the top left and top
+    	right corners. Simply put, the answer is NOT border-radius: 5px.) */
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+
 }
-#announcement-content {
-    padding: 15px;
-    background: rgba(222, 104, 104, 0.1);
-    color: #4c5765;
-    font-size: 12px;
-    line-height: 24px;
-    border-radius: 2px;
-}
-.download {
-    background: #78c272;
-    color: white;
-    width: 240px;
-    text-align: center;
-    padding: 15px 0px;
-    border-radius: 2px;
-    font-size: 13px;
-    font-weight: 700;
-    margin: 30px auto;
+/*  [Problem 10]
+    FIXME: When h2, h3, and h4 are hovered over, add an underline and
+    change the cursor to a pointer. Write the selectors and the styles!
+
+    Write your own class identifier. */
+h2:hover, h3:hover, h4:hover {
+    text-decoration: underline;
     cursor: pointer;
 }
-#announcement .link {
-    background: #de6868;
-    width: 320px;
-    font-size: 13px;
-    font-weight: 700;
-    color: white;
-    text-align: center;
-    padding: 15px 0px;
-    margin: 30px auto;
-    border-radius: 2px;
-    cursor: pointer;
+
+
+
+.notifications__notifs .notifications__notifs--box{
+    /*  [Problem 11]
+        FIXME: Turn this element into a flex element and use the correct property
+        to align the announcement icon and the text box. */
+    display: flex;
+    align-items: start;
+        
+
+        
 }
