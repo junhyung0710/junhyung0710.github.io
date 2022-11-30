@@ -4,13 +4,21 @@ window.onload = (event) => {
     document.querySelector('#bass-slash').style.display = 'none';
     document.querySelector('#piano-slash').style.display = 'none';
     document.querySelector('#sing-slash').style.display = 'none';
-    document.getElementById("song").play();
-    document.getElementById("play").style.display = 'none';
+    document.getElementById("pause").style.display = 'none';
+    document.querySelector('.instruments').style.display = 'none';
+    HandleDrumClick();
+    HandleElectricClick();
+    HandleBassClick();
+    HandlePianoClick();
+    HandleSingClick();  
+
 }
 
 function HandleInstrumentsClick() {
     let x = document.querySelector('.instruments')
+    let y = document.querySelector('.main')
     x.style.display = x.style.display == "none" ? "block" : "none";
+    y.style.display = y.style.display == "none" ? "block" : "none";
 }
 
 function HandlePauseClick() {
@@ -19,6 +27,16 @@ function HandlePauseClick() {
     let pause = document.getElementById("pause")
     play.style.display = "flex"
     pause.style.display = "none";
+    document.querySelector('#drum-slash').style.display = 'block';
+    document.querySelector('#electric-slash').style.display = 'block';
+    document.querySelector('#bass-slash').style.display = 'block';
+    document.querySelector('#piano-slash').style.display = 'block';
+    document.querySelector('#sing-slash').style.display = 'block';
+    f_1.stop();
+    f_2.stop();
+    f_3.stop();
+    f_4.stop();
+    f_5.stop();
 }
 
 function HandlePlayClick() {
@@ -27,6 +45,16 @@ function HandlePlayClick() {
     let pause = document.getElementById("pause")
     play.style.display = "none"
     pause.style.display = "flex";
+    document.querySelector('#drum-slash').style.display = 'none';
+    document.querySelector('#electric-slash').style.display = 'none';
+    document.querySelector('#bass-slash').style.display = 'none';
+    document.querySelector('#piano-slash').style.display = 'none';
+    document.querySelector('#sing-slash').style.display = 'none';
+    f_1.start();
+    f_2.start();
+    f_3.start();
+    f_4.start();
+    f_5.start();
 }
 
 
@@ -109,4 +137,25 @@ function HandleSingClick() {
     } else {
         f_5.toggle();
     }
+}
+
+
+function HandleMainClick() {
+    let x = document.querySelector('.icon-arrow')
+    let y = document.querySelector('.menu')
+    y.style.display = y.style.display == "none" ? "block" : "none";
+    x.classList.toggle('icon-arrow-transition')
+
+
+
+}
+
+function HandleAboutClick() {
+    let x = document.querySelector('.about-wrapper')
+    x.style.display = x.style.display == "none" ? "flex " : "none";
+}
+
+function HandleStageLightsClick() {
+    let x = document.querySelector('.stageshadow')
+    x.style.animationPlayState = x.style.animationPlayState == "paused" ? "running" : "paused";
 }

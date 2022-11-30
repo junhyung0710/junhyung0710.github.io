@@ -7,11 +7,16 @@
 <script src="https://unpkg.com/freezeframe/dist/freezeframe.min.js"></script>
 <script src="index.js"></script>
 <script src="https://kit.fontawesome.com/8189bea7f5.js" crossorigin="anonymous"></script>
+<audio id = "song" type = "audio/mpeg" src = "./assets/images/Midnight_Pretenders.mp3" loop = "loop"></audio>
 </head>
 <body>  
     <div class = 'wrapper'>
         <div class = 'container'>
-            <audio id = "song" type = "audio/mpeg" src = "./assets/images/Tomoko Aran - I'm In Love [Warner Bros. Records] 1983.mp3" loop = "loop"></audio>
+            <div class = 'about-wrapper'>
+                <div class = 'about-container'>
+                    <div class = 'about-text'>Welcome to my music room! Stay and enjoy the vibes.</div>
+                </div>
+            </div>
             <div class = 'figure-container'>
                 <figure id = 'piano-figure' class = 'figure-gif'>
                     <img class = 'freezeframe4 piano player' src = './assets/images/ひよこ-ピヨミ.gif'>
@@ -31,10 +36,10 @@
             </div>
             <div class = 'stageshadow'></div>
             <div class = 'menu-wrapper main'>
-                <div class ='hide-wrapper'>
+                <div class ='hide-wrapper visible-border'>
                     <div class = 'hide-box'>
-                        <div class = 'textwrapper'>
-                            <img class = 'icon-arrow' src = './assets/images/close_arrow.png'>
+                        <div class = 'arrowwrapper'>
+                            <img class = 'icon-arrow' src = './assets/images/close_arrow.png' onclick = 'HandleMainClick()'>
                         </div>
                     </div>
                 </div> 
@@ -53,11 +58,15 @@
                             <div class = 'text'>Play</div>
                         </div>
                         <div class ='icon-box' onclick = 'HandleVolumeClick()'>
-                            <img class = 'icon' src = './assets/images/download (10).png'>
-                            <div class = 'text'>Volume</div> 
+                            <img class = 'icon' src = './assets/images/volume.png'>
+                            <div class = 'text'>Volume</div>
                         </div>
-                        <div class ='icon-box'>
-                            <img class = 'icon' src = './assets/images/download (15).png'>
+                        <div class ='icon-box' onclick = 'HandleStageLightsClick()'>
+                            <img class = 'icon' src = './assets/images/stagelights.png'>
+                            <div class = 'text'>Stagelights</div> 
+                        </div>
+                        <div class ='icon-box' onclick = 'HandleAboutClick()'>
+                            <img class = 'icon' src = './assets/images/about.png'>
                             <div class = 'text'>About</div>
                         </div>
                     </div>
@@ -66,33 +75,33 @@
             <div class = 'menu-wrapper instruments'>
                 <div class ='hide-wrapper'>
                     <div class = 'hide-box'>
-                        <div class = 'textwrapper'>
+                        <div class = 'arrowwrapper'>
                             <img class = 'icon-arrow' src = './assets/images/close_arrow.png'  onclick = 'HandleInstrumentsClick()'>
                         </div>
                     </div>
                 </div> 
                 <div class = "menu">
                     <div class = 'menu-container'>
-                        <div class ='icon-box' onclick = 'HandleDrumClick()'>
-                            <img class = 'icon' src = './assets/images/download (14).png'>
-                            <img class = 'slash' id = 'drum-slash' src = './assets/images/slash4.png'>
+                        <div class ='icon-box' onclick = 'HandlePianoClick()'>
+                            <img class = 'icon' src = './assets/images/download (15).png'>
+                            <img class = 'slash' id = 'piano-slash' src = './assets/images/slash4.png'>
                         </div>
                         <div class ='icon-box' onclick = 'HandleElectricClick()'>
                             <img class = 'icon' src = './assets/images/download (12).png'>
                             <img class = 'slash' id = 'electric-slash' src = './assets/images/slash4.png'>
                         </div>
-                        <div class ='icon-box' onclick = 'HandleBassClick()'>
-                            <img class = 'icon' src = './assets/images/download (25).png'>
-                            <img class = 'slash' id = 'bass-slash' src = './assets/images/slash4.png'>
-                        </div>
-                        <div class ='icon-box' onclick = 'HandlePianoClick()'>
-                            <img class = 'icon' src = './assets/images/download (15).png'>
-                            <img class = 'slash' id = 'piano-slash' src = './assets/images/slash4.png'>
-                        </div>
                         <div class ='icon-box' onclick = 'HandleSingClick()'>
                             <img class = 'icon' src = './assets/images/download (9).png'>
                             <img class = 'slash' id = 'sing-slash' src = './assets/images/slash4.png'>
                         </div>    
+                        <div class ='icon-box' onclick = 'HandleBassClick()'>
+                            <img class = 'icon' src = './assets/images/download (25).png'>
+                            <img class = 'slash' id = 'bass-slash' src = './assets/images/slash4.png'>
+                        </div>
+                        <div class ='icon-box' onclick = 'HandleDrumClick()'>
+                            <img class = 'icon' src = './assets/images/download (14).png'>
+                            <img class = 'slash' id = 'drum-slash' src = './assets/images/slash4.png'>
+                        </div>
                     </div>
                 </div>
             </div>

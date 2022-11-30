@@ -3,6 +3,7 @@ html {
   margin: 0;
   height: 100%;
   background: #800000;
+  overflow: hidden;
 }
 
 .wrapper {
@@ -25,6 +26,29 @@ html {
   justify-content: center;
 }
 
+.about-wrapper{
+  width: 56%;
+  height: 40%;
+  box-shadow: inset 0 0 10px 2000px rgba(0, 0, 0, 0.515);
+  position: absolute;
+  top: 15%;
+  left: 22%;
+  border-radius: 10px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-container {
+  width: 70%;
+  display: flex;
+}
+
+.about-text {
+  font-size: 3em;
+  color: white;
+}
+
 .figure {
   display: flex;
   align-items: center;
@@ -41,15 +65,15 @@ html {
 .main {
   position: absolute;
   top: 0;
-  left: 0;
-  padding: 7%;
+  right: 0;
+  padding: 5%;
 }
 
 .instruments {
   position: absolute;
   top: 0;
   right: 0;
-  padding: 7%;
+  padding: 5%;
 }
 
 .figure-container {
@@ -73,14 +97,36 @@ html {
 .stageshadow {
   width: 0%;
   height: 0%;
-  box-shadow: 0 0 10px 2000px rgba(0, 62, 186, 0.2);
   position: absolute;
+  animation-name: stagelight-change;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
 }
+
+@keyframes stagelight-change {
+  0% { box-shadow: 0 0 10px 2000px rgba(0, 62, 186, 0.2);}
+  7.7% {box-shadow: 0 0 10px 2000px rgba(0, 102, 186, 0.2);}
+  15.4% {box-shadow: 0 0 10px 2000px rgba(0, 170, 186, 0.2);}
+  23.1% {box-shadow: 0 0 10px 2000px rgba(0, 186, 112, 0.2);}
+  30.8% {box-shadow: 0 0 10px 2000px rgba(0, 186, 46, 0.2);}
+  38.5% {box-shadow: 0 0 10px 2000px rgba(74, 186, 0, 0.2);}
+  46.2% {box-shadow: 0 0 10px 2000px rgba(152, 186, 0, 0.2);}
+  53.9% {box-shadow: 0 0 10px 2000px rgba(186, 164, 0, 0.2);}
+  61.6% {box-shadow: 0 0 10px 2000px rgba(186, 77, 0, 0.2);}
+  69.3% {box-shadow: 0 0 10px 2000px rgba(186, 15, 0, 0.2);}
+  77% {box-shadow: 0 0 10px 2000px rgba(186, 0, 56, 0.2);}
+  84.7% {box-shadow: 0 0 10px 2000px rgba(170, 0, 186, 0.2);}
+  92.4% {box-shadow: 0 0 10px 2000px rgba(81, 0, 186, 0.2);}
+  100% { box-shadow: 0 0 10px 2000px rgba(0, 62, 186, 0.2);}
+}
+
+
+
 
 .menu-wrapper {
   display: flex;
   flex-direction: column;
-  width: 5%;
+  width: 6%;
   height: 70%;
 }
 
@@ -103,7 +149,7 @@ html {
   flex-direction: row;
 }
 
-.textwrapper {
+.arrowwrapper {
   display: flex;
   width: 100%;
   height: 100%;
@@ -117,6 +163,12 @@ html {
   display: flex;
   align-items: center;
 }
+
+.icon-arrow-transition {
+  transform: rotate(180deg);
+}
+
+
 
 .menu {
   width: 100%;
