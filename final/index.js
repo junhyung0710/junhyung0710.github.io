@@ -11,6 +11,8 @@ window.onload = (event) => {
     HandleBassClick();
     HandlePianoClick();
     HandleSingClick();  
+    document.querySelector('#stagelights-slash').style.display = 'none';
+    document.querySelector('#mute-slash').style.display = 'none';
 
 }
 
@@ -18,7 +20,7 @@ function HandleInstrumentsClick() {
     let x = document.querySelector('.instruments')
     let y = document.querySelector('.main')
     x.style.display = x.style.display == "none" ? "block" : "none";
-    y.style.display = y.style.display == "none" ? "block" : "none";
+    y.style.display = y.style.display == "none" ? "flex " : "none";
 }
 
 function HandlePauseClick() {
@@ -157,5 +159,14 @@ function HandleAboutClick() {
 
 function HandleStageLightsClick() {
     let x = document.querySelector('.stageshadow')
-    x.style.animationPlayState = x.style.animationPlayState == "paused" ? "running" : "paused";
+    let y = document.querySelector('#stagelights-slash')
+    x.style.display = x.style.display == "none" ? "flex " : "none";
+    y.style.display = y.style.display == "none" ? "flex " : "none";
+}
+
+function HandleMuteClick() {
+    let x = document.querySelector('#song');
+    let y = document.querySelector('#mute-slash')
+    y.style.display = y.style.display == "none" ? "flex " : "none";
+    x.volume = x.volume == '1' ? '0' : '1';
 }

@@ -214,6 +214,11 @@ html {
   width: 75%;
 }
 
+#mute-slash, #stagelights-slash {
+  transform: rotateY(180deg);
+  margin-bottom: 1em;
+}
+
 .icon-box-x {
   width: 100%; 
   height: auto;
